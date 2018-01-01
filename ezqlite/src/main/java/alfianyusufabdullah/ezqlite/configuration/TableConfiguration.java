@@ -13,11 +13,36 @@ import java.util.List;
 public class TableConfiguration {
 
     public static final String TYPE_TEXT = "TEXT";
+
+    public static String TEXT_TEXT_WITH_LENGHT(int lenght) {
+        return "TEXT(" + lenght + ")";
+    }
+
     public static final String TYPE_VARCHAR = "VARCHAR";
+
+    public static String TEXT_VARCHAR_WITH_LENGHT(int lenght) {
+        return "VARCHAR(" + lenght + ")";
+    }
+
     public static final String TYPE_REAL = "REAL";
-    public static final String TYPE_BOOL = "BOOL";
+
+    public static String TEXT_REAL_WITH_LENGHT(int lenght) {
+        return "REAL(" + lenght + ")";
+    }
+
     public static final String TYPE_INTEGER = "INTEGER";
+
+    public static String TEXT_INTEGER_WITH_LENGHT(int lenght) {
+        return "INTEGER(" + lenght + ")";
+    }
+
     public static final String TYPE_BLOB = "BLOB";
+
+    public static String TEXT_BLOB_WITH_LENGHT(int lenght) {
+        return "BLOB(" + lenght + ")";
+    }
+
+    public static final String TYPE_BOOL = "BOOL";
 
     private static List<String> Column = new ArrayList<>();
     private static String TableName;
