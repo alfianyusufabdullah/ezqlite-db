@@ -52,7 +52,6 @@ public class Remove {
             } else {
                 callback.Failed("Something Wrong! , Check Your Configuration");
             }
-
         } catch (SQLiteException e) {
             callback.Failed(e.getMessage());
         }

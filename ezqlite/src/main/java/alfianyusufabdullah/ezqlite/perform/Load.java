@@ -35,7 +35,6 @@ public class Load {
     private Load(String TableName, DatabaseHelperConfiguration databaseHelperConfiguration) {
         this.TableName = TableName;
         this.databaseHelperConfiguration = databaseHelperConfiguration;
-
     }
 
     public static Load init(String TableName, DatabaseHelperConfiguration databaseHelperConfiguration) {
@@ -107,16 +106,13 @@ public class Load {
         } finally {
             if (cursor != null) {
                 cursor.close();
-
             }
         }
     }
 
     public Cursor load() {
-
         SQLiteDatabase database = databaseHelperConfiguration.getWritableDatabase();
         Cursor cursor = null;
-
         try {
 
             if (isDistinct && cancellationSignal != null) {
@@ -139,5 +135,4 @@ public class Load {
             }
         }
     }
-
 }
