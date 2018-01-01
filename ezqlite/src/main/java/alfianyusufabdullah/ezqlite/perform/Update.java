@@ -75,11 +75,12 @@ public class Update {
         } else if (value instanceof Byte) {
             Byte bytes = (Byte) value;
             values.put(Column, bytes);
+        }else {
+            throw new RuntimeException(value.getClass().getName() + " Not Supported Object");
         }
 
         return update;
     }
-
 
     public void update(OnDatabaseCallback callback){
         SQLiteDatabase database = configuration.getWritableDatabase();
