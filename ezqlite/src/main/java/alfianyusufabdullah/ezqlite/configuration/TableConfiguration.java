@@ -64,6 +64,11 @@ public class TableConfiguration {
     }
 
     public String getQueryCreate() {
+
+        if (Column.size() == 0) {
+            throw new RuntimeException("Table Not Have Column");
+        }
+
         StringBuilder queryBuilder = new StringBuilder().append("CREATE TABLE IF NOT EXISTS ").append(TableName).append(" (");
         for (String column : Column) {
             queryBuilder.append(column).append(",");
